@@ -1,0 +1,32 @@
+{
+  "name": "agriculture-crop-advisor",
+  "version": "1.0.0",
+  "description": "Production-grade AI-Powered Agriculture Crop Advisory Assistant",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "start": "npm run start --workspace=server",
+    "migrate": "npm run migrate --workspace=server",
+    "seed": "npm run seed --workspace=server",
+    "test": "npm run test --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "agriculture",
+    "crop-advisory",
+    "gemini-ai",
+    "react",
+    "express",
+    "postgresql",
+    "typescript"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}
